@@ -1,0 +1,34 @@
+{
+    "number": 5,
+    "title": "停车库塌陷，豪车损毁",
+    "content": [{
+        "id": 1,
+        "discription": "2014年7月9日凌晨6时许，位于成都武侯区棕树南街的水漪袅铜小区内发生路面垮塌，垮塌路基紧邻在建棕树体育场工地。据工地现场工作人员介绍，8日晚暴雨过后，工地地基表层的防水层出现损坏，随后路基发生垮塌。记者在现场看到，小区有4辆汽车坠入垮塌形成的深坑，另有一辆白色SUV悬在“半空”摇摇欲坠，小区入口和附近道路已封锁。",
+        "img": "news/collapse/img/collapse_1.jpg"
+    }, {
+        "id": 2,
+        "discription": "目击者说，早上轰隆一声，停在地面的奔驰、奥迪、宝马等豪车连同地面栽种的大树一同坠入数米深的基坑内。图为一辆白色SUV悬在“半空”摇摇欲坠。",
+        "img": "news/collapse/img/collapse_2.jpg"
+    }, {
+        "id": 3,
+        "discription": "大雨冲毁工地基坑，豪车掉坑里。",
+        "img": "news/collapse/img/collapse_3.jpg"
+    }, {
+        "id": 4,
+        "discription": "数辆豪车连同地面栽种的大树一同坠入七八米深的基坑内。",
+        "img": "news/collapse/img/collapse_4.jpg"
+    }, {
+        "id": 5,
+        "discription": "一辆白色SUV悬在“半空”摇摇欲坠，小区入口和附近道路已封锁。",
+        "img": "news/collapse/img/collapse_5.jpg"
+    }],
+    "comment": {
+        "count": 100,
+        "user": "匿名用户",
+        "content": {
+            "ori": "塌的好！",
+            "alt": "我也觉得塌的好！"
+        }
+
+    }
+}

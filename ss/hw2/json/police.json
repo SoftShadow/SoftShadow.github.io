@@ -1,0 +1,30 @@
+{
+    "number": 4,
+    "title": "美国潮流警察，骑滑板巡逻",
+    "content": [{
+        "id": 1,
+        "discription": "据《每日邮报》2014年7月9日报道，美国格林贝，今年40岁的Joel Zwicky将自己的爱好与工作相结合，经常滑滑板巡逻，距离奥他是世界上第一个滑滑板巡逻的警察。",
+        "img": "news/police/img/police_1.jpg"
+    }, {
+        "id": 2,
+        "discription": "据《每日邮报》2014年7月9日报道，美国格林贝，今年40岁的Joel Zwicky将自己的爱好与工作相结合，经常滑滑板巡逻，距离奥他是世界上第一个滑滑板巡逻的警察。",
+        "img": "news/police/img/police_2.jpg"
+    }, {
+        "id": 3,
+        "discription": "据《每日邮报》2014年7月9日报道，美国格林贝，今年40岁的Joel Zwicky将自己的爱好与工作相结合，经常滑滑板巡逻，距离奥他是世界上第一个滑滑板巡逻的警察。",
+        "img": "news/police/img/police_3.jpg"
+    }, {
+        "id": 4,
+        "discription": "据《每日邮报》2014年7月9日报道，美国格林贝，今年40岁的Joel Zwicky将自己的爱好与工作相结合，经常滑滑板巡逻，距离奥他是世界上第一个滑滑板巡逻的警察。",
+        "img": "news/police/img/police_4.jpg"
+    }],
+    "comment": {
+        "count": 198,
+        "user": "滑板爱好者",
+        "content": {
+            "ori": "滑板协会招新！",
+            "alt": "兴趣"
+        }
+
+    }
+}

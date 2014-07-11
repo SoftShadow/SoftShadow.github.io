@@ -1,0 +1,279 @@
+@font-face{
+	font-family: Myriad;
+	src: url(font/Myriad.otf);
+}
+@font-face{
+	font-family: dongqing;
+	src: url("font/dongqing.otf");
+}
+body {
+	font-family: dongqing;
+}
+
+#background{
+	position: absolute;
+	width: 100%;
+	height: 2600px;
+	background: #000;
+}
+
+#title{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 40px;
+	text-align: center;
+	height: 50px;
+	width: 100%;
+}
+
+.img{
+	position: relative;
+	width: 100%;
+	height: 600px;
+	margin: 0 auto;	
+}
+.img-discription{
+	width: 1000px;
+	height: 100px;
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	text-indent: 999;
+	background: rgba(211, 212, 213, 0.23) ;
+	border-radius: 16px;
+	color: #fff;
+	opacity: 0;
+}
+div.img-discription:hover{
+	opacity: 1;
+	-webkit-transition: opacity 1s ease;
+}
+.img-slider-loading{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:999;
+	background: rgba(0,0,0,0.9);
+	color: #fff;
+	text-align: center;
+	line-height: 400px;
+}
+.img-slider{
+	height: 100%;
+	width: 100%;
+	position:relative;
+}
+.img-slider li{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+.img-slider li img{
+	width: 100%;
+	/*-webkit-filter: grayscale(100%);*/
+}
+.img-title{
+	font-size: 30px;
+	text-align: center;
+}
+a#left-img-control{
+	display: block;
+	float: left;
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	left: 0px;
+	top: 230px;
+	z-index: 999;
+	background-color: #fff;
+	opacity: 0;
+}
+a#left-img-control:hover{
+	-webkit-transition: all .9s ease;
+	background-color: #fff;
+	opacity: 0.3;
+}
+img.right-arrow, img.left-arrow{
+	width: 80px;
+}
+img.left-arrow{
+	margin-left: 15px;
+	margin-top: 15px;
+	opacity: 1;
+}
+a#right-img-control{
+	display: block;
+	float: right;
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	right: 0px;
+	top: 230px;
+	z-index: 999;
+	background-color: #fff;
+	opacity: 0;
+}
+img.right-arrow{
+	margin-top: 15px;
+	margin-left: 15px;
+}
+a#right-img-control:hover{
+	-webkit-transition: all .9s ease;
+	background-color: #fff;
+	opacity: 0.3;
+}
+.img-slider-thumbs{
+	height: 13px;
+	margin: 0 auto;
+	position: relative;
+}
+.img-slider-thumbs li{
+	position: relative;
+	float: left;
+	height: 100%;
+}
+.img-slider-thumbs li.img-slider-element{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	height: 100%;
+	z-index: 10;
+	text-indent: -9000px;
+	background: #000;
+	background: rgba(0,0,0,0.9);
+}
+.img-slider-thumbs li a{
+	display: block;
+	text-indent: -9000px;
+	background: #333;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	border-right: 1px solid #555;	
+	-webkit-transition: background 0.5s ease;
+}
+.img-slider-thumbs li a img:hover{
+	background-color: #f0f0f0;
+}
+.img-slider-thumbs li img{
+	position: absolute;
+	bottom: 50px;
+	opacity: 0;
+	z-index: 999;
+	max-width: 100%;
+	-webkit-transition: all 0.4s ease;
+	/***** 借鉴的代码，可以实现反射效果 *****/
+	-webkit-box-reflect: 
+        below 0px -webkit-gradient(
+            linear, 
+            left top, 
+            left bottom, 
+            from(transparent), 
+            color-stop(50%, transparent), 
+            to(rgba(255,255,255,0.3))
+            );
+}
+.img-slider-thumbs li:hover img{
+	opacity: 1;
+	bottom: 13px;
+}
+
+
+html, body, div, h1, h2, ul, li, dl, dd, dt{ margin: 0; padding: 0; }
+
+
+
+.cHeader{
+	font-family: dongqing;
+	font-size: 45px;
+	text-align: center;
+	padding-top: 20px;
+	color: black;
+}
+.panigator{
+	margin-bottom: 60px;
+}
+.stat{
+	margin-left: 20px;
+	margin-right: 30px;
+	font-size: 12px;
+	font-family: sans-serif;
+}
+.nav{
+	margin-left: 40px;
+	font-size: 14px;
+}
+.comment{
+	position: relative;
+	margin-left: 175px;
+	margin-right: 175px;
+	height: 800px;
+}
+.commentline{
+	list-style-type: none;
+	margin: 50px, 0;
+	font-family: Myriad;
+	color: black;
+}
+ul.commentline li{
+	position: relative;
+	margin-bottom: 20px;
+}
+ul.commentline li .time{
+	position: absolute;
+    width: 90px;
+    text-align: right;
+    left: 0;
+    top: 10px;
+}
+ul.commentline li .hour{
+	position: absolute;
+	width: 290px;
+	text-align: right;
+	left: -190px;
+	top: 30px;
+	font-size: 38px;
+	line-height: 50px;
+	overflow: hidden;
+}
+ul.commentline li .number{
+	position: absolute;
+	width: 56px;
+	height: 56px;
+	line-height: 56px;
+	left: 97px;
+	text-align: center;
+	font-size: 30px;
+}
+ul.commentline li .commentcontent{
+	background-color: rgb(230, 230, 230);
+  	padding: 20px;
+	font-size: 13px;
+	line-height: 20px;
+	margin-left: 140px;
+	margin-right: 40px;
+	font-family: dongqing;
+}
+ul.commentline li .commentcontent:hover{
+	background-color: rgb(210, 210, 210);
+}
+#user{
+	font-family: dongqing;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+#user-comment{
+	font-family: dongqing;
+	font-size: 14px;
+	padding-right: 20px;
+}
+.line{
+	border: 1px solid #666;
+	width: 800px;
+	margin-left: 140px;
+}

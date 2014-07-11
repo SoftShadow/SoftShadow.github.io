@@ -1,0 +1,42 @@
+{
+    "number": 7,
+    "title": "奇人奇技：那些身怀绝技的人",
+    "content": [{
+        "id": 1,
+        "discription": "四川成都“烂脸王”汤术全表演嘴巴吃鼻子。",
+        "img": "news/stuntMan/img/stuntMan_1.jpg"
+    }, {
+        "id": 2,
+        "discription": "南京一饭馆里大厨上演了一段绝活，肚皮上切肉丝。",
+        "img": "news/stuntMan/img/stuntMan_2.jpg"
+    }, {
+        "id": 3,
+        "discription": "湖北奇人洪国斌展示他的拿手绝活，耳朵吹气球。",
+        "img": "news/stuntMan/img/stuntMan_3.jpg"
+    }, {
+        "id": 4,
+        "discription": "长沙广济桥鸿园小区内，理发师王小宇倒立给顾客剪发。",
+        "img": "news/stuntMan/img/stuntMan_4.jpg"
+    }, {
+        "id": 5,
+        "discription": "60岁的夏阿姨展示一次抖起15个空竹的绝活儿。",
+        "img": "news/stuntMan/img/stuntMan_5.jpg"
+    }, {
+        "id": 6,
+        "discription": "因为玩扫帚走红网络的北京环卫工张秀芳在南京街头秀了一把扫帚绝活，她的笑脸和乐观的生活态度感染了路人。",
+        "img": "news/stuntMan/img/stuntMan_6.jpg"
+    }, {
+        "id": 7,
+        "discription": "辽宁省抚顺市奇人张东在南京表演口吞拳头，大号汤勺的“大嘴”绝活。",
+        "img": "news/stuntMan/img/stuntMan_7.jpg"
+    }],
+    "comment": {
+        "count": 134,
+        "user": "围观群众",
+        "content": {
+            "ori": "好厉害！",
+            "alt": "肚皮切肉好脏"
+        }
+
+    }
+}

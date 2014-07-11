@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>stuntMan</title>
+		<link href="css/content_css.css" rel="stylesheet">
+	</head>
+	<body>
+		<!--图片内容-->
+		<div class="title">
+			<p id="title"></p>
+		</div>
+		<div id="img" class="img">
+			<a id="left-img-control" href="#">
+				<span><img  class="left-arrow" src="ui/left.png"></span>
+			</a>
+			<a id="right-img-control" href="#">
+				<span><img  class="right-arrow" src="ui/right.png"></span>
+			</a>
+			<!--图片幻灯片-->
+			<ul class="img-slider">
+				<li>
+					<img src="" alt="nonefind" class="responsiveslide">
+					<div class="img-discription"></div>
+				</li>
+				<li>
+					<img src="" alt="nonefind" class="responsiveslide">
+					<div class="img-discription"></div>
+				</li>
+				<li>
+					<img src="" alt="nonefind" class="responsiveslide">
+					<div class="img-discription"></div>
+				</li>
+				<li>
+					<img src="" alt="nonefind" class="responsiveslide">
+					<div class="img-discription"></div>
+				</li>
+				<li>
+					<img src="" alt="nonefind" class="responsiveslide">
+					<div class="img-discription"></div>
+				</li>
+				<li>
+					<img src="" alt="nonefind" class="responsiveslide">
+					<div class="img-discription"></div>
+				</li>
+				<li>
+					<img src="" alt="nonefind" class="responsiveslide">
+					<div class="img-discription"></div>
+				</li>
+			</ul>
+			
+			<!--图片幻灯片缩略图-->
+			<ul class="img-slider-thumbs" style="display:block">
+				<li class="img-slider-element">current</li>
+				<li>
+					<a href="#">Slide 1</a>
+					<img src="" class="slide-show-thumb">
+				</li>
+				<li>
+					<a href="#">Slide 2</a>
+					<img src="" class="slide-show-thumb">
+				</li>
+				<li>
+					<a href="#">Slide 3</a>
+					<img src="" class="slide-show-thumb">
+				</li>
+				<li>
+					<a href="#">Slide 4</a>
+					<img src="" class="slide-show-thumb">
+				</li>
+				<li>
+					<a href="#">Slide 5</a>
+					<img src="" class="slide-show-thumb">
+				</li>
+				<li>
+					<a href="#">Slide 6</a>
+					<img src="" class="slide-show-thumb">
+				</li>
+				<li>
+					<a href="#">Slide 7</a>
+					<img src="" class="slide-show-thumb">
+				</li>
+			</ul>
+		</div>
+		</div>
+
+		<div class="commentlist">
+				<p class="cHeader">精彩评论</p>
+				<div class="panigator">
+					<span class="stat">共<b id="count"></b>条评论  分<b id="page"></b>页  当前<b id="currPage"></b>页
+					</span><span class="nav"> 
+					<input type="button" value="首页" id="firPage">
+					<input type="button" value="上一页" id="prePage">
+					<input type="button" value="下一页" id="nexPage">
+					<input type="button" value="尾页" id="lasPage">
+					</span>
+				</div>
+			</div>
+			<div class="comment">
+				<ul class="commentline">
+				</ul>
+			</div>
+		</div>
+
+
+
+
+		<!-- jQuery引用 -->
+		<script src="javascript/jquery-2.1.1.min.js"></script>
+		<!-- 异步刷新获取外部数据 -->
+		<script type="text/javascript" src="javascript/whore.js"></script>
+		<!-- 动画效果JS -->
+		<script src="javascript/slideshow_content.js"></script>
+	</body>
+</html>

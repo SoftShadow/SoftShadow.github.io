@@ -1,0 +1,205 @@
+@font-face{
+	font-family: Myriad;
+	src: url("font/Myriad.otf");
+}
+@font-face{
+	font-family: sgs;
+	src: url("font/Sprite Graffiti Shadow.otf");
+}
+@font-face{
+	font-family: KlinicSlabLight;
+	src: url("font/KlinicSlabLight.otf");
+}
+@font-face{
+	font-family: dongqing;
+	src: url("font/dongqing.otf");
+}
+
+body {
+	font-family: dongqing;
+}
+
+#background{
+	position: absolute;
+	width: 100%;
+	height: 750px;
+	background: #000;
+}
+.img{ 
+	position: relative;
+	width: 100%;
+	height: 600px;
+	margin: 0 auto;	
+}
+.img-slider-loading{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:999;
+	background: rgba(0,0,0,0.9);
+	color: #fff;
+	text-align: center;
+	line-height: 400px;
+}
+.img-slider{
+	height: 100%;
+	width: 100%;
+	position:relative;
+}
+.img-slider li{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+.img-slider li img{
+	width: 100%;
+
+	/*-webkit-filter: grayscale(100%);*/
+}
+.img-title{
+	position: absolute;
+	width: 650px;
+	height: 60px;
+	top:200px;
+	left: 490px;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 40px;
+	line-height: 50px;	
+	color: #f36c0c;
+	padding: 0 10px;
+	background-color: rgba(200, 200, 200, 0.2);
+}
+a#left-img-control{
+	display: block;
+	float: left;
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	left: 0px;
+	top: 230px;
+	z-index: 999;
+	background-color: #fff;
+	opacity: 0;
+}
+a#left-img-control:hover{
+	-webkit-transition: all .9s ease;
+	background-color: #fff;
+	opacity: 0.3;
+}
+img.right-arrow, img.left-arrow{
+	width: 80px;
+}
+img.left-arrow{
+	margin-left: 15px;
+	margin-top: 15px;
+	opacity: 1;
+}
+a#right-img-control{
+	display: block;
+	float: right;
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	right: 0px;
+	top: 230px;
+	z-index: 999;
+	background-color: #fff;
+	opacity: 0;
+}
+img.right-arrow{
+	margin-top: 15px;
+	margin-left: 15px;
+}
+a#right-img-control:hover{
+	-webkit-transition: all .9s ease;
+	background-color: #fff;
+	opacity: 0.3;
+}
+.img-slider-thumbs{
+	list-style-type: none;
+	width: 600px;
+	height: 13px;
+	margin: 0 auto;
+	position: relative;
+	float: right;
+}
+.img-slider-thumbs li{
+	position: relative;
+	float: left;
+	height: 100%;
+}
+.img-slider-thumbs li.img-slider-element{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	height: 100%;
+	z-index: 10;
+	text-indent: -9000px;
+	background: #000;
+	background: rgba(0,0,0,0.9);
+}
+.img-slider-thumbs li a{
+	display: block;
+	text-indent: -9000px;
+	background: #333;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	border-right: 1px solid #555;	
+	-webkit-transition: background 0.5s ease;
+}
+.img-slider-thumbs li a img:hover{
+	background-color: #f0f0f0;
+}
+.img-slider-thumbs li img{
+	position: absolute;
+	bottom: 10px;
+	opacity: 0.45;
+	z-index: 9999;
+	max-width: 100%;
+	-webkit-transition: all 0.4s ease;
+	/***** 借鉴的代码，可以实现反射效果 *****/
+	-webkit-box-reflect: 
+        below 0px -webkit-gradient(
+            linear, 
+            left top, 
+            left bottom, 
+            from(transparent), 
+            color-stop(50%, transparent), 
+            to(rgba(255,255,255,0.3))
+            );
+}
+.img-slider-thumbs li img:hover{
+	bottom: 50px;
+	opacity: 1;
+	-webkit-transition: all 0.4s ease;
+}
+#title{
+	position: relative;
+	width: 100%;
+	height: 100px;
+}
+#title h1{
+	color: #f36c0c;
+	font-size: 40px;
+	position: absolute;
+	top: 70px;
+	left: 1100px;
+	font-family: sgs;
+}
+#title p{
+	color: #f36c0c;
+	font-size: 29px;
+	position: absolute;
+	top: 30px;
+	left: 300px;
+	font-family: KlinicSlabLight;
+}
+
+html, body, div, h1, h2, ul, li, dl, dd, dt{ margin: 0; padding: 0; }
