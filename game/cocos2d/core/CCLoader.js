@@ -404,7 +404,7 @@ cc.LoaderScene = cc.Scene.extend( /** @lends cc.LoaderScene# */ {
         //logo
         var logoWidth = 180;
         var logoHeight = 180;
-        var centerPos = cc.p(this._winSize.width / 2, this._winSize.height / 2 + 30);
+        var centerPos = cc.p(this._winSize.width / 2, this._winSize.height / 2 + 80);
 
         this._logoTexture = new Image();
         var _this = this,
