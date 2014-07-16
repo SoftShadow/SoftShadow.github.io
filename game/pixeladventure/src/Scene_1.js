@@ -29,7 +29,7 @@ var Scene_1Layer = cc.LayerColor.extend({
         this.init_bonus();
 
         // 添加主角
-        this.init_hero();
+        this.init_hero(15);
 
         //添加枪
         //this.init_gun();
@@ -108,10 +108,10 @@ var Scene_1Layer = cc.LayerColor.extend({
 
         this.sawtes[0] = new Sawt(40);
         this.sawtes[1] = new Sawt(25);
-        this.sawtes[0].setPosition(cc.p(origin.x,origin.y+winSize.height*0.9));
-        this.sawtes[1].setPosition(cc.p(this.walls[1].getPosition().x+this.walls[1].getContentSize().width*0.3,this.walls[1].getPosition().y+this.walls[1].getContentSize().height/2));
-        this.sawtes[0].UDMove("down",600,4);
-        this.sawtes[1].LRMove("left",200,4);
+        this.sawtes[0].setPosition(cc.p(origin.x,origin.y+winSize.height));
+        this.sawtes[1].setPosition(cc.p(this.walls[1].getPosition().x-this.walls[1].getContentSize().width/2,this.walls[1].getPosition().y+this.walls[1].getContentSize().height/2));
+        this.sawtes[0].UDMove("down",winSize.height,4);
+        this.sawtes[1].LRMove("right",this.walls[1].getContentSize().width,4);
 
         this.addChild(this.sawtes[0],3);
         this.addChild(this.sawtes[1],1);
@@ -121,13 +121,13 @@ var Scene_1Layer = cc.LayerColor.extend({
 
 
     //初始化主角
-    init_hero:function(){
+    init_hero:function(size){
         // 获得游戏屏幕的尺寸
         var winSize = cc.Director.getInstance().getWinSize();
         // 获取屏幕坐标原点
         var origin = cc.Director.getInstance().getVisibleOrigin();
 
-        this.hero = new Hero();
+        this.hero = new Hero(size);
         this.hero.setPosition(cc.p(100, 680));
         this.addChild(this.hero, 3);
     },

@@ -29,7 +29,7 @@ var Scene_3Layer = cc.LayerColor.extend({
         this.init_bonus();
 
         // 添加主角
-        this.init_hero();
+        this.init_hero(15);
 
         //添加枪
         this.init_gun();
@@ -121,14 +121,18 @@ var Scene_3Layer = cc.LayerColor.extend({
 
         this.sawtes[0] = new Sawt(25);
         this.sawtes[1] = new Sawt(40);
+        this.sawtes[2] = new Sawt(40);
         this.sawtes[0].setPosition(cc.p(winSize.width,winSize.height*0.9));
-        this.sawtes[1].setPosition(cc.p(winSize.width*0.2,0));
+        this.sawtes[1].setPosition(cc.p(0,0));
+        this.sawtes[2].setPosition(cc.p(winSize.width, 0));
         this.sawtes[0].UDMove("down",250,2);
-        this.sawtes[1].LRMove("right",300,3);
+        this.sawtes[1].LRMove("right",winSize.width,5);
+        this.sawtes[2].LRMove("left", winSize.width, 5);
 
 
         this.addChild(this.sawtes[0],1);
         this.addChild(this.sawtes[1],1);
+        this.addChild(this.sawtes[2],1);
 
 
     },
@@ -173,18 +177,19 @@ var Scene_3Layer = cc.LayerColor.extend({
     },
 
     //初始化主角
-    init_hero:function(){
+    init_hero:function(size){
         // 获得游戏屏幕的尺寸
         var winSize = cc.Director.getInstance().getWinSize();
         // 获取屏幕坐标原点
         var origin = cc.Director.getInstance().getVisibleOrigin();
 
-        this.hero = new Hero();
+        this.hero = new Hero(size);
         this.hero.setPosition(cc.p(100, 680));
         this.addChild(this.hero, 3);
     },
 
     onTouchesMoved:function(touches, event){
+        debugger;
         this.hero.jumpAction();
     },
     onKeyDown:function(keyCode){
@@ -301,16 +306,18 @@ var Scene_3Layer = cc.LayerColor.extend({
 
         //检测主角边缘碰撞
         var winSize = cc.Director.getInstance().getWinSize();
-        if(this.hero.getPosition().x <= this.hero.getContentSize().width/2){
+        if(this.hero.getPosition().x < this.hero.getContentSize().width/2){
+            debugger;
             this.hero.setPosition(this.hero.getContentSize().width/2, this.hero.getPosition().y);
+            debugger;
         }
-        if(this.hero.getPosition().x >= winSize.width-this.hero.getContentSize().width/2){
+        if(this.hero.getPosition().x > winSize.width-this.hero.getContentSize().width/2){
             this.hero.setPosition(winSize.width-this.hero.getContentSize().width/2, this.hero.getPosition().y);
         }
-        if(this.hero.getPosition().y <= this.hero.getContentSize().height/2){
+        if(this.hero.getPosition().y < this.hero.getContentSize().height/2){
             this.hero.setPosition(this.hero.getPosition().x, this.hero.getContentSize().height/2);
         }
-        if(this.hero.getPosition().y >= winSize.height-this.hero.getContentSize().height/2){
+        if(this.hero.getPosition().y > winSize.height-this.hero.getContentSize().height/2){
             this.hero.setPosition(this.hero.getPosition().x, winSize.height-this.hero.getContentSize().height/2);
         }
 
@@ -360,6 +367,7 @@ var Scene_3Layer = cc.LayerColor.extend({
                 }
             }
             if(this.collide(bullet, this.hero)){
+                debugger;
                 var gameover = new GameOverScene();
                 cc.Director.getInstance().replaceScene(cc.TransitionCrossFade.create(1, gameover));
             }
@@ -369,7 +377,19 @@ var Scene_3Layer = cc.LayerColor.extend({
         for(i in this.medicines){
             var medicine = this.medicines[i];
             if(this.collide(medicine, this.hero)){
-                medicine.change(this.hero);
+                var location = this.hero.getPosition();
+                this.removeSprite(this.hero);
+                if(medicine.kind == "wax"){
+                    this.init_hero(30);
+                    this.hero.setPosition(location);
+                    cc.AudioEngine.getInstance().playEffect(e_Wax);
+
+                }
+                else if(medicine.kind == "shrink"){
+                    this.init_hero(7.5);
+                    this.hero.setPosition(location);
+                    cc.AudioEngine.getInstance().playEffect(e_Shrink);
+                }
                 this.removeSprite(medicine);
             }
         }
@@ -377,6 +397,7 @@ var Scene_3Layer = cc.LayerColor.extend({
         for(i in this.sawtes){
             var sawt = this.sawtes[i];
             if(sawt.ifCut(this.hero)){
+                debugger;
                 var gameover = new GameOverScene();
                 cc.Director.getInstance().replaceScene(cc.TransitionCrossFade.create(1, gameover));
             }

@@ -29,7 +29,7 @@ var Scene_4Layer = cc.LayerColor.extend({
         this.init_bonus();
 
         // 添加主角
-        this.init_hero();
+        this.init_hero(15);
 
         //添加枪
         this.init_gun();
@@ -179,13 +179,13 @@ var Scene_4Layer = cc.LayerColor.extend({
     },
 
     //初始化主角
-    init_hero:function(){
+    init_hero:function(size){
         // 获得游戏屏幕的尺寸
         var winSize = cc.Director.getInstance().getWinSize();
         // 获取屏幕坐标原点
         var origin = cc.Director.getInstance().getVisibleOrigin();
 
-        this.hero = new Hero();
+        this.hero = new Hero(size);
         this.hero.setPosition(cc.p(100, 680));
         this.addChild(this.hero, 3);
     },
@@ -392,7 +392,7 @@ var Scene_4Layer = cc.LayerColor.extend({
                 }
             }
             if(this.collide(bullet, this.hero)){
-                cc.AudioEngine.getInstance().playMusic(e_Die);
+                debugger;
                 var gameover = new GameOverScene();
                 cc.Director.getInstance().replaceScene(cc.TransitionCrossFade.create(0.5, gameover));
             }
@@ -402,7 +402,19 @@ var Scene_4Layer = cc.LayerColor.extend({
         for(i in this.medicines){
             var medicine = this.medicines[i];
             if(this.collide(medicine, this.hero)){
-                medicine.change(this.hero);
+                var location = this.hero.getPosition();
+                this.removeSprite(this.hero);
+                if(medicine.kind == "wax"){
+                    this.init_hero(30);
+                    this.hero.setPosition(location);
+                    cc.AudioEngine.getInstance().playEffect(e_Wax);
+
+                }
+                else if(medicine.kind == "shrink"){
+                    this.init_hero(7.5);
+                    this.hero.setPosition(location);
+                    cc.AudioEngine.getInstance().playEffect(e_Shrink);
+                }
                 this.removeSprite(medicine);
             }
         }
@@ -410,7 +422,16 @@ var Scene_4Layer = cc.LayerColor.extend({
         for(i in this.sawtes){
             var sawt = this.sawtes[i];
             if(sawt.ifCut(this.hero)){
-                cc.AudioEngine.getInstance().playMusic(e_Die);
+                debugger;
+                var gameover = new GameOverScene();
+                cc.Director.getInstance().replaceScene(cc.TransitionCrossFade.create(0.5, gameover));
+            }
+        }
+        // 检测漩涡
+        for(i in this.vortexes){
+            var vortex = this.vortexes[i];
+            if(this.collide(vortex, this.hero)){
+                debugger;
                 var gameover = new GameOverScene();
                 cc.Director.getInstance().replaceScene(cc.TransitionCrossFade.create(0.5, gameover));
             }

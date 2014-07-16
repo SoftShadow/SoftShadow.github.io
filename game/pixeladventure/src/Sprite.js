@@ -10,12 +10,20 @@ var Hero = cc.Sprite.extend({
     velocity: null,
 
     // 构造函数
-    ctor:function(){
+    ctor:function(size){
         this._super();
         cc.Director.getInstance().getKeyboardDispatcher();
         cc.Director.getInstance().getMouseDispatcher();
         cc.Director.getInstance().getTouchDispatcher();
-        this.initWithFile(s_Hero, cc.rect(0, 0, 15, 15));
+        if(size == 15){
+            this.initWithFile(s_Hero, cc.rect(0, 0, 15, 15));
+        }
+        else if(size == 30){
+            this.initWithFile(s_Hero, cc.rect(0, 0, 30, 30));
+        }
+        else if(size == 7.5){
+            this.initWithFile(s_Hero, cc.rect(0, 0, 7.5, 7.5));
+        }
         this.velocity = cc.p(0, this.downSpeed);
         this.volume = 1;
     },
@@ -289,21 +297,6 @@ var Medicine = cc.Sprite.extend({
             this.initWithFile(s_Shrink);
         }
         this.setTag(3);
-    },
-
-    // 变化
-    change:function(target){
-        if(this.kind == "wax"){
-            target.setContentSize(2*target.getContentSize().width, 2*target.getContentSize().height);
-            target.scaleTo(2);
-            cc.AudioEngine.getInstance().playEffect(e_Wax);
-
-        }
-        else if(this.kind == "shrink"){
-            target.setContentSize(0.5*target.getContentSize().width, 0.5*target.getContentSize().height);
-            target.scaleTo(0.5);
-            cc.AudioEngine.getInstance().playEffect(e_Shrink);
-        }
     },
 
     //定期左右移动的函数

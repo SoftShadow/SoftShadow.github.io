@@ -29,7 +29,7 @@ var Scene_2Layer = cc.LayerColor.extend({
         this.init_bonus();
 
         // 添加主角
-        this.init_hero();
+        this.init_hero(15);
 
         //添加枪
         this.init_gun();
@@ -173,13 +173,13 @@ var Scene_2Layer = cc.LayerColor.extend({
 
 
     //初始化主角
-    init_hero:function(){
+    init_hero:function(size){
         // 获得游戏屏幕的尺寸
         var winSize = cc.Director.getInstance().getWinSize();
         // 获取屏幕坐标原点
         var origin = cc.Director.getInstance().getVisibleOrigin();
 
-        this.hero = new Hero();
+        this.hero = new Hero(size);
         this.hero.setPosition(cc.p(100, 680));
         this.addChild(this.hero, 3);
     },
