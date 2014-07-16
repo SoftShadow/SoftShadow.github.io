@@ -402,9 +402,9 @@ cc.LoaderScene = cc.Scene.extend( /** @lends cc.LoaderScene# */ {
         cc.Scene.prototype.init.call(this);
 
         //logo
-        var logoWidth = 200;
-        var logoHeight = 113;
-        var centerPos = cc.p(this._winSize.width / 2, this._winSize.height / 2);
+        var logoWidth = 180;
+        var logoHeight = 180;
+        var centerPos = cc.p(this._winSize.width / 2, this._winSize.height / 2 + 30);
 
         this._logoTexture = new Image();
         var _this = this,
@@ -413,7 +413,7 @@ cc.LoaderScene = cc.Scene.extend( /** @lends cc.LoaderScene# */ {
             _this._initStage(centerPos);
             this.removeEventListener('load', handler, false);
         });
-        this._logoTexture.src = "logo.jpg";
+        this._logoTexture.src = "logo.png";
         this._logoTexture.width = logoWidth;
         this._logoTexture.height = logoHeight;
 
