@@ -187,12 +187,18 @@ var Scene_3Layer = cc.LayerColor.extend({
     onTouchesMoved:function(touches, event){
         this.hero.jumpAction();
     },
-    onKeyUp:function(keyCode){
-        if(keyCode == cc.KEY.a){
+    onKeyDown:function(keyCode){
+        if(keyCode == cc.KEY.a || keyCode == cc.KEY.left){
             this.hero.moveLeft();
         }
-        else if(keyCode == cc.KEY.d){
+        else if(keyCode == cc.KEY.d || keyCode == cc.KEY.right){
             this.hero.moveRight();
+        }
+        else if(keyCode == cc.KEY.w || keyCode == cc.KEY.up){
+            this.hero.moveUp();
+        }
+        else if(keyCode == cc.KEY.s || keyCode == cc.KEY.down){
+            this.hero.moveDown();
         }
     },
 

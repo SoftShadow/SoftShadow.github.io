@@ -27,6 +27,18 @@ var Hero = cc.Sprite.extend({
         var jump = cc.JumpTo.create(1, cc.p(location.x, location.y+this.jumpDis), this.jumpDis, 1);
         this.runAction(jump);
     },
+    // 定义上移动作
+    moveUp:function(){
+        var location = this.getPosition();
+        var up = cc.MoveTo.create(0.3, cc.p(location.x, location.y+this.distance));
+        this.runAction(up);
+    },
+    // 定义下移操作
+    moveDown:function(){
+        var location = this.getPosition();
+        var down = cc.MoveTo.create(0.3, cc.p(location.x, location.y-this.distance));
+        this.runAction(down);
+    },
     // 定义左移动作
     moveLeft:function(){
         var location = this.getPosition();
