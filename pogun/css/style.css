@@ -1,0 +1,826 @@
+ƒ/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Global
+:: Navigation
+:: Stage 1: Intro
+:: Stage 2: Testimonial
+:: Stage 3: Tech Specs
+:: Stage 4: Keys Intro
+:: Stage 5: Key Tech Spec
+:: Stage 6: Key Toggle
+:: Stage 7: Elegance Description
+:: Stage 8: Photo Gallery
+:: Stage 9: CTA Buy Now
+*/
+
+
+.test-2 {
+	padding-top: 300px;}
+
+
+#hd-mob {
+	width: 100%;
+	background: #6dcff6;
+	opacity: 0.0;
+	display: none!important;
+	text-transform: uppercase;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	overflow: hidden;}
+
+#hd-mob.active {
+	width: 100%;
+	height: 100%!important;
+	display: block!important;
+	text-transform: uppercase;
+	opacity: 1.0!important;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;}
+	
+	
+#hd-mob ul li a {
+	border: 1px solid #6dcff6;
+	padding: 10px!important;
+	display: block!important;
+	text-transform: uppercase;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;}
+	
+#hd-mob ul li a.full {
+	width: 100%;
+	border: 1px solid #6dcff6;
+	padding: 20px!important;
+	display: block!important;
+	text-transform: uppercase;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;}
+	
+#hd-mob ul li a .mob-drop:hover  {
+	background: #333;
+	color: #fff;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;}
+
+ a.mob-slide {
+ 		background: #4bb1da;
+ 		text-align: center;
+		border: 1px solid #6dcff6!important;
+		padding: 10px!important;
+		display: block!important;
+		text-transform: uppercase;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;}
+
+.bg-change {
+	background: white!important;
+}
+
+
+
+/* -----------------------------------------
+   Global
+----------------------------------------- */
+	.bl {color: #6dcff6!important;}
+	.or {color: #ffa800!important;}
+	
+	section {height:46.875em; padding: 2.500em 0 0 0 ;position: relative; z-index: 100;margin-top: 300px!important;}
+	
+	#stage-1 {margin-top: 25px!important;}
+	
+	#stage-2, #stage-3, #stage-4, #stage-5, #stage-6, #stage-7, #stage-8, #stage-8b {position: relative; z-index: 100;padding: 50px 0 0 0!important;
+	}
+
+	header {
+		width: 100%;
+		height: 3.125em;
+		border-bottom: 0.063em solid #333;
+		padding: 0.625em 0;
+		top: 0;
+		position: fixed!important;
+		z-index: 4000!important;
+		background-color:rgba(0,0,0,0.8);
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	
+	header.active {
+		height: 100%!important;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	
+	header ../img#logo { display: block; margin: 0.313em auto 0em auto;}
+	
+	/* -------- Navigation -------- */	
+	
+	header nav {margin-top: 0.313em;}
+	
+	header nav ul li {display: inline-block;}
+	
+	header nav ul li a {
+		display: inline-block;
+		height: 0.625em;
+		width: 0.625em;
+		border: 0.125em solid #555555;
+		border-radius: 0.625em;
+		margin: 0.313em 10% 0.313em 0px;
+		overflow: hidden;
+		cursor: pointer;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+	
+	header nav ul li a:hover {
+		background: #333!important;
+		border: 1px solid #333;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+	
+	.active-lit {
+		background: #fff!important;
+		border: 1px solid #fff;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+	
+	header nav ul li:last-child > a {
+		background: #6dcff6!important;
+		border: 0.125em solid #6dcff6!important;
+	}
+	
+	
+	ul#outnav {float: right; position: relative;}
+	
+	ul#outnav li {
+		list-style: none;
+		margin: 0 0.625em;
+		display: inline-block;
+	}
+	
+	ul#outnav a#share  {
+		opacity: 0.3;
+		background: url('../img/sprite-outnav.png')no-repeat;
+		background-position: 0em -1.750em;
+		height: 1.563em;
+		width: 1.563em;
+		overflow: hidden;
+		display: block;
+		cursor: pointer;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+	
+	ul#outnav a#call  {
+		opacity: 0.3;
+		background: url('../img/sprite-outnav.png')no-repeat;
+		height: 1.563em;
+		width: 1.563em;
+		background-position: -1.750em -1.750em;
+		overflow: hidden;
+		display: block;
+		cursor: pointer;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+	
+	ul#outnav a#email  {
+		opacity: 0.3;
+		background: url('../img/sprite-outnav.png')no-repeat;
+		height: 1.563em;
+		width: 1.563em;
+		background-position: -3.5em -1.750em;
+		overflow: hidden;
+		display: block;
+		cursor: pointer;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+	
+	ul#outnav a#share:hover, ul#outnav a#call:hover, ul#outnav a#email:hover {
+		opacity: 1.0;
+	}
+	
+	
+	
+	
+	
+	
+	a.tooltip {outline:none; }
+	a.tooltip:hover {text-decoration:none;
+
+	} 
+	a.tooltip span {
+		text-transform: uppercase;
+	    z-index:10;opacity: 0;
+	    margin-top:20px; 
+	    font-weight: 700;
+	    font-size: .75em;
+	    width:100%;  padding: 5px;
+	    text-align: center;
+	    width: 100px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	    color: #fff;
+	}
+	a.tooltip:hover span{
+	 position:absolute; 
+	    border:1px solid #222;
+	    background:#000;
+	}
+	.callout {z-index:20;position:absolute;border:0;top:-14px;left:0px;}
+	    
+	/*CSS3 extras*/
+	a.tooltip span
+	{
+	    border-radius:20px;
+	    -moz-border-radius: 20px;
+	    -webkit-border-radius: 20px;
+	    opacity: 1;
+	}
+
+
+/* -----------------------------------------
+   Navigation
+----------------------------------------- */
+.mobGallery ../img{
+	border: 6px solid #333;
+	margin-bottom: 30px;
+}
+
+/* -----------------------------------------
+   Stage 1: Intro
+----------------------------------------- */
+
+	#stage-1 {padding-top: 3.125em;}
+	#stage-1 hgroup {margin-top: 40%;}
+	#arrow {}
+	
+
+/* -----------------------------------------
+   Stage 2: Testimonial
+----------------------------------------- */
+	#stage-2 {background: url('../img/bg-quote.jpg')center no-repeat;
+	}
+	#stage-2 hgroup {margin-top: 200px;}
+	#quo-2 {opacity: 0;
+		-webkit-transition: all .6s ease-in-out;
+	-moz-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;}
+
+	
+
+
+/* -----------------------------------------
+   Stage 3: Tech Specs
+----------------------------------------- */
+	#stage-3 {  padding-top:0.938em ;}
+	
+	/* -------- Product Spec -------- */	
+	
+	#pro-spec {
+		opacity: 0;
+		-webkit-transition: all .6s ease-in-out;
+		-moz-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+		height: 470px!important;
+	}
+
+	.fr-bottom {
+		height: 2px;
+		width: 0%;
+		background: #6dcff6;
+		margin: 0.625em auto;
+		display: block!important;
+		-webkit-transition: all .6s ease-in-out;
+		-moz-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+	}
+	.fr-side {
+		height: 0%;
+		width: 2px;
+		background: #6dcff6;
+		margin: 1.563em 0 0 -1.563em ;
+		display: block!important;
+		-webkit-transition: all .6s ease-in-out;
+		-moz-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+	}
+	
+	.tp-side {
+		height: 0%;
+		width: 2px;
+		background: #6dcff6;
+		margin: 2.500em 0 0 -1.563em ;
+		display: block;
+		-webkit-transition: all .6s ease-in-out;
+		-moz-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+	}
+
+	
+	/* -------- Key Spec -------- */
+	
+	#key-spec {
+		display: none;
+		opacity: 0;
+		-webkit-transition: all .6s ease-in-out;
+		-moz-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+		height: 470px;
+	}
+	
+	#key-det, #amp-det {
+		display: none;
+		opacity: 0;
+		-webkit-transition: all .6s ease-in-out;
+		-moz-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+	}
+	
+	.det-active {
+		display: block!important;
+		opacity: 1!important;
+		-webkit-transition: all .6s ease-in-out;
+		-moz-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+	}
+
+	.key-sd-bottom {
+		height: 2px;
+		width: 0%;
+		background: #333;
+		margin: 0.625em auto;
+		display: block;
+		-webkit-transition: all .6s ease-in-out;
+		-moz-transition: all .6s ease-in-out;
+		-o-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+	}
+	
+	
+	.spec-num {
+		text-align: center;
+		display: block;
+		font-size: 1em;
+		padding: 0.625em 0.313em;
+		color: #6dcff6;
+		height: 100%;
+		width: 100%;
+	}
+	
+	.spec-num-vr {
+		text-align: center;
+		display: block;
+		font-size: 1em;
+		padding: 0.625em 0.313em;
+		color: #6dcff6;
+		height: 100%;
+		width: 100%;
+		margin-top: 200px!important;
+		margin-left: -50px!important;
+	}
+	
+	.t-left {padding: 2.500em 1.250em;}
+	.t-left ul li {
+		list-style-position: inside;
+	}
+	
+	#pro-spec, #key-spec {
+		height: 510px;
+	}
+
+	#spec-toggle {
+		height: 40px;
+		width: 120px;
+		border-bottom: 1px solid #fff;
+		border-radius: 40px;
+		margin-right: 1.875em;
+	}
+	
+	#key-spec .spec-num {opacity: 0;}
+	#pro-spec .spec-num, #pro-spec .spec-num-vr {opacity: 0;}
+	
+	 #key-spec .spec-num span{
+		border: 1px solid #ffa800;
+		padding: 7px 7px 7px 8px;
+		border-radius: 40px;
+		text-align: center;
+	}
+	
+	#pro-spec .spec-num span, #pro-spec .spec-num-vr span {
+		border: 1px solid #6dcff6;
+		padding: 7px 7px 7px 8px;
+		border-radius: 40px;
+		text-align: center;
+	}
+	
+	.toggle {
+		display: block;
+		background: url('../img/blue-marker.png')center no-repeat;
+		height: 80px;
+		width: 50px;
+		margin-left: -10px;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+		cursor: pointer;
+	}
+	
+	.orange {
+		display: block;
+		background: url('../img/orange-marker.png')center no-repeat;
+		height: 80px;
+		width: 50px;
+		margin-left: 80px;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+	}
+	
+	.t-right { padding: 0em 1em 0em 0em;}
+	
+	#stage-3 ul li {
+		font-size: 1em;
+		line-height: 1.4;
+		list-style-position:outside;
+	}
+	
+	#stage-3 h3 {
+		border-bottom: 1px solid #fff;
+		padding: 0 0 0.313em 0;
+		margin: 0 0 0.313em 0;
+	}
+
+	.sp-fix {
+		height: 400px!important;
+	}
+	
+	.indicator1 {
+		margin: 60px 0 0 -30px;
+		opacity: 0;
+	}
+	
+	.indicator2 {
+		margin: 40px 0 0 -30px;
+		opacity: 0;
+	}
+	
+	.indicator3 {
+		margin: 115px 0 0 -30px;
+		opacity: 0;
+	}
+/* -----------------------------------------
+   Stage 4: Keys Intro
+----------------------------------------- */
+	#stage-4 {padding: 0.625em 0 0 0;}
+
+
+
+/* -----------------------------------------
+   Stage 5: Key Tech Spec
+----------------------------------------- */
+	#stage-5 {padding: 4.688em 0 0 0;}
+	#spec-round {opacity: 0;}
+	#spec-round ../img {margin: 0 auto; display: block;
+	}
+	
+	#stage-5 a {
+		color: #6dcff6;-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+		margin: 1em 0 0 0;
+	}
+	
+	#stage-5 a:hover {
+		color: #666;-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+/* -----------------------------------------
+   Stage 6: Key Toggle
+----------------------------------------- */
+	#stage-6 h4 {font-size: 1.5em;font-weight: 300; margin-bottom: 0px; padding: 0; text-align: left!important;color: #ffa800;margin-top: 3.5em;text-transform: uppercase;}
+	#stage-6 span {font-size: 16px!important;}
+
+	#stage-6 p {margin-top: 1em;}
+	#key-po {margin-top: 30%;}
+	
+	#tube-container {display: block;}
+	
+	#output-container {display: none;}
+	
+	#key-toggle-container {
+		border-bottom: 1px solid #363636;
+		padding: 0.938em 0;
+	}
+	
+	/** Mobile **/
+	#stage-6-mobile h5{
+		color: white;
+		font-size: 1.1em;
+		margin-top: 40px;
+	}
+	#stage-6-mobile ../img{
+		height: 100%;
+		width: 100%;
+	}
+	#stage-6-mobile h4 {font-size: 1.5em;font-weight: 300; margin-bottom: 0px; padding: 0; text-align: left!important;color: #ffa800;text-transform: uppercase;
+	}
+	#stage-6-mobile p{
+		text-align: left;
+	}
+	#stage-6-mobile div.row{
+		margin-top: 25px;
+	}
+	#stage-6-mobile hr{
+		border: 1px solid #777;
+		margin-top: 5px;
+	}
+	#key-po-mobile{
+		height: 200px!important;
+		width: 200px!important;
+	}
+	/** End Mobile **/
+	
+	#key-toggle {
+		height: 40px;
+		width: 120px;
+		border-bottom: 1px solid #fff;
+		border-radius: 40px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.key-toggle {
+		display: block;
+		background: url('../img/orange-marker.png')center no-repeat;
+		height: 80px;
+		width: 50px;
+		margin-left: -10px;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+		cursor: pointer;
+	}
+	
+	.key-orange {
+		display: block;
+		height: 80px;
+		width: 50px;
+		margin-left: 80px;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+	}
+	
+	.switch-active {
+		color: #ffa800!important;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+	}
+	
+	.tube-icon {
+		margin: 1.563em 0 0 0;
+	}
+
+/* -----------------------------------------
+   Stage 7: Elegance Description
+----------------------------------------- */
+	#spec-animation {
+		margin-top: -1200px;
+		height: 750px;
+		width: auto;
+		position: relative;
+		z-index: 1;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+
+	#diagram {
+		opacity: 0;
+		height: 0px;
+		width: 1000px;
+		overflow: hidden;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		background: url('../img/diagram.png')center top;
+		-webkit-transition: all 3s ease-in-out;
+		-moz-transition: all 3s ease-in-out;
+		-o-transition: all 3s ease-in-out;
+		transition: all 3s ease-in-out;
+		position: relative;
+		z-index: 1;
+	}
+	
+	.anim-live {
+		display: block;
+		opacity: 1;
+		height: 750px;
+		width: 1000px;
+		-webkit-transition: all 3s ease-in-out;
+		-moz-transition: all 3s ease-in-out;
+		-o-transition: all 3s ease-in-out;
+		transition: all 3s ease-in-out;
+		position: relative;
+		z-index: 1;
+	}
+	
+
+/* -----------------------------------------
+   Stage 7: Elegance Description
+----------------------------------------- */
+
+
+
+
+/* ----------------------------------e-------
+   Stage 8: Photo Gallery
+----------------------------------------- */
+
+#stage-8 {
+	margin-top: 40px!important;
+}
+
+	#gallery {
+		padding: 0 20px;
+		height: 100%!important;
+		margin: 0px 0 40px 0;
+	}
+	
+	#gallery  a > ../img {
+		border: 4px solid #333;
+		display: block;
+	}
+	
+	#gallery a {
+		display: block;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+		margin-bottom: 20px;
+	}
+	
+	#gallery a:hover {
+		background: #000 url('../img/gallery/zoom.png') center;
+		opacity: .4;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+	
+	.reveal {
+		height: 100%;
+		width: 100%;
+		display: block;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;	
+		overflow: hidden;
+	}
+
+	.overlay ../img {
+		border: 4px solid #333;
+	}
+
+/* -----------------------------------------
+   Testimonial
+----------------------------------------- */
+	#testimonial  {
+		
+		margin-top: 500px!important;
+		margin-bottom: 400px;
+		padding-top: 100px;
+	}
+
+	
+	#testimonial a {color: #6dcff6;-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;}
+	#testimonial a:hover {color: #666;-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;}
+
+/* -----------------------------------------
+   Background Animation
+----------------------------------------- */
+
+	
+	.bd-white {background: #ebebef!important;}
+	
+	
+	
+
+/* -----------------------------------------
+   Stage 9: CTA Buy Now
+----------------------------------------- */
+	#wh {
+		height: 400px;
+		padding-top: 500px;
+		
+	}
+
+	#stage-9 {
+		height: 100%;
+	}
+	#stage-9 h1 { color: #636363!important;}
+	#stage-9 h4 {font-size: 1.875em;color: #636363!important;}
+	
+	#stage-9 {
+		padding-top: 0px;
+	}
+	
+	#cta-group {
+		opacity: 1;
+		margin-bottom: 20px;
+		-webkit-transition: all 3s ease-in-out;
+		-moz-transition: all 3s ease-in-out;
+		-o-transition: all 3s ease-in-out;
+		transition: all 3s ease-in-out;
+	}
+	
+	a.cta {
+		color: #6dcff6;
+		padding: 7px 10px;
+		border: 2px solid #6dcff6;
+		border-radius: 10px;
+		font-size: 2.250em;
+		text-align: center;
+		display: block;
+		margin: 20px auto 0px auto;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+	
+	a.cta:hover {
+		color:#fff;
+		background: #6dcff6;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+	
+	
+	#cta-po {
+		opacity: 0;
+	}
+
+
+	#cta-po-mob {
+		display: none;}
+
+
+
+
+

@@ -1,0 +1,404 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Global
+:: Navigation
+:: Stage 1: Intro
+:: Stage 2: Testimonial
+:: Stage 3: Tech Specs
+:: Stage 4: Keys Intro
+:: Stage 5: Key Tech Spec
+:: Stage 6: Key Toggle
+:: Stage 7: Elegance Description
+:: Stage 8: Photo Gallery
+:: Stage 9: CTA Buy Now
+*/
+
+
+/* -----------------------------------------
+   Global
+----------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+#cta-group {
+	display: block;}
+	
+	
+#tube-container h4, #tube-container h6, #output-container h4, #output-container h6 {
+	text-align: center!important;}
+	
+#tube-container h4, #output-container h4 {
+	margin-top: 30%!important;}	
+	
+	
+
+section {height:100%!important; padding: 2.500em 2.500em 0em 2.500em!important ;position: relative; z-index: 100;margin-top: 300px!important;}
+
+#spec-toggle {
+	height: 40px;
+	width: 120px;
+	border-bottom: 1px solid #fff;
+	border-radius: 40px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+}
+
+#stage-9 {
+	padding-bottom: 0px;
+}
+	h2 {font-size: 1.50em; font-weight: 400;font-style: normal;
+	}
+	h4 {font-size: 1.50em; line-height: 1.2;
+	}
+	p { text-align: center;}
+	
+	section {height:100%; padding: 0 1.25em 1.75em 1.25em;position: relative; z-index: 100;}
+
+#stage-1 hgroup {margin-top: 0px; margin-bottom: 50px;}
+#stage-2 hgroup {margin-top: 0em!important;margin-bottom: 1em!important;
+}
+#stage-1 h1 {
+	line-height: 1;
+	padding-top: 20px;
+}
+header nav ul li a {
+	display: inline-block;
+	border: 0.125em solid #333;
+	border-radius: 0.625em;
+	margin: 0.313em 20% 0.313em ;
+	overflow: hidden;
+	cursor: pointer;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+#pro-spec {
+	opacity: 1;
+	-webkit-transition: all .6s ease-in-out;
+	-moz-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;
+}
+
+.active-lit {
+	background: #333!important;
+	border: none!important;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+ul#outnav {float: right; position: relative;}
+
+ul#outnav li {
+	
+	list-style: none;
+	margin: 0px 0 0 -2px!important;
+	display: inline-block!important;
+}
+
+.cn-cta {
+	padding: none!important;
+	margin: 0px!important;
+	overflow: hidden!important;
+}
+
+ul.block-grid.two-up {
+	width: 105%;
+	padding: 0px!important;
+	clear: both!important;
+}
+
+.block-grid.two-up > li { width: 50%; padding: 0 0px !important; display: inline-block!important;
+}
+
+.bdr {
+	border-left: 1px solid #258ecd;
+}
+
+
+}
+
+
+/* -----------------------------------------
+   Navigation
+----------------------------------------- */
+
+
+@media screen and (orientation: portrait){
+	body {
+		background: black!important;
+	}
+	section {
+		height: 100%!important;
+		margin-top: 75px;
+		display: block!important;
+	}
+	#stage-2, #stage-3, #stage-4, #stage-5, #stage-6, #stage-7, #stage-8, #wh,  #stage-9 {
+		display: none;
+		margin-top: 50px!important;
+		padding-top: 20px;
+	}
+	
+	.t-right { padding: 0em 1.5em 0em 1.5em!important;}
+	.pro-det {
+		margin-left: 50px!important;
+	}
+	.tab-on{
+		display: block!important;
+	}
+	
+	.tab-off {
+		display: none!important;
+	}
+
+	#stage-1 {
+		margin-bottom: 0px!important;
+		margin-top: 50px!important;
+	}
+	
+	#stage-1 hgroup {margin-top: 0px; margin-bottom: 50px;}
+	#stage-1 h1 {
+		margin-top: -50px!important;
+	}
+	
+	#stage-1 img {
+		display: block!important;
+		margin-left: auto!important;
+		margin-right: auto!important;
+	}
+	
+	#quo-2 {
+		opacity: 1;
+	}
+	
+	#cta-group {
+		opacity: 1!important;
+		margin-bottom: 20px;
+		-webkit-transition: all 3s ease-in-out;
+		-moz-transition: all 3s ease-in-out;
+		-o-transition: all 3s ease-in-out;
+		transition: all 3s ease-in-out;
+	}
+	
+	#cta-po {
+		opacity: 1!important;
+	}
+
+	header nav ul li a {
+	display: inline-block;
+	height: 0.625em;
+	width: 0.625em;
+	border: 0.125em solid #333;
+	border-radius: 0.625em;
+	margin: 0.313em 20% 0.313em;
+	overflow: hidden;
+	cursor: pointer;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+#pro-spec {
+	opacity: 1;
+	-webkit-transition: all .6s ease-in-out;
+	-moz-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;
+}
+	
+	
+	#stage-2 hgroup {margin-top: 6.75em;}
+	
+	
+	#stage-3  {padding: 3.75em 0em;}
+	
+	#spec-round {opacity: .5;}
+	
+	.sp-fix {
+		height: 327px!important;
+	}
+	
+	
+	
+	
+	#gallery {
+		padding: 3.75em 0em;
+	}
+	
+	#gallery a:hover {
+		background:none!important;
+		opacity: 1!important;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+	
+	
+	
+	#cta-po {
+		display: none!important;
+	}
+	
+	#cta-po-mob {
+		display: block;
+	}
+	
+	
+	
+
+
+
+
+
+
+/* -----------------------------------------
+   Stage 1: Intro
+----------------------------------------- */
+
+#spec-round {
+	opacity: 1;
+}
+
+
+/* -----------------------------------------
+   Stage 2: Testimonial
+----------------------------------------- */
+
+#stage-9 {
+	margin-bottom: 0px!important;
+}
+
+
+/* -----------------------------------------
+   Stage 3: Tech Specs
+----------------------------------------- */
+.fr-bottom {
+	height: 2px;
+	width: 0%;
+	background: #6dcff6;
+	margin: 0.625em auto;
+	display: block;
+	-webkit-transition: all .6s ease-in-out;
+	-moz-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;
+}
+.fr-side {
+	height: 0px;
+	width: 2px;
+	background: #6dcff6;
+	margin: 1.563em 0 0 -1.563em ;
+	display: block;
+	float: left;
+	-webkit-transition: all .6s ease-in-out;
+	-moz-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;
+}
+
+.tp-side {
+	height: 0px;
+	width: 2px;
+	background: #6dcff6;
+	margin: 2.500em 0 0 -1.563em ;
+	display: block;
+	float: left;
+	-webkit-transition: all .6s ease-in-out;
+	-moz-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;
+}
+
+
+#stage-9 {
+	padding-top: 200px!important;
+	}
+
+#wh {
+	display: none!important;
+	height: 0px!important;
+}
+
+#cta-po-mob {
+	display: block;}
+
+/* -----------------------------------------
+   Stage 4: Keys Intro
+----------------------------------------- */
+
+.bg-change {
+	background: #000!important;
+}
+
+
+/* -----------------------------------------
+   Stage 5: Key Tech Spec
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Stage 6: Key Toggle
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Stage 7: Elegance Description
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Stage 8: Photo Gallery
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Stage 9: CTA Buy Now
+----------------------------------------- */
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+	
+	#cta-group, cta-po-mob {
+		opacity: 1!important;
+	}
+
+	#stage-9 h1 { color: #fff!important;}
+	#stage-9 h4 {font-size: 1.875em;color: #fff!important;}
+
+	.bg-change {
+		background: #000!important;
+	}
+	
+	#cta-po {
+		display: none!important;
+	}
+	
+	#cta-po-mob {
+		display: block;
+	}
+
+}
+
+
+
+
+
